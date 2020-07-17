@@ -20,7 +20,7 @@ class BlogDetailView(DetailView):
 class BlogCreateView(SuccessMessageMixin,CreateView):
     model = Post
     template_name = 'blog/post_new.html'
-    fields = ('autor','titulo','slug','conteudo')
+    fields = ('autor','titulo','conteudo')
     success_message = "%(field)s - Criado com sucesso"
 
     def get_success_message(self, cleaned_data):
